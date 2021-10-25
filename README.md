@@ -1,20 +1,44 @@
-# NAME
+# 名前
 
-Convert PDF to PNG on colab
+watchdog
 
-# DEMO
+# 概要
 
-This program is a PDF converter that runs on colab.
+顔認識と動体検知で検出した時のみ録画するコードです。Windows10では画面ロックした状態でも利用できます。離席中に監視させたいときなどに利用できます。
 
-# Requirement
+# 動作確認済みPythonバージョン
 
-* Google account
+* Python 3.8.7
 
-# Usage
+# 必要なライブラリ
 
-1. Access [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb).
-2. Click `File` > `Upload notebook`.
-3. Upload `Convert_PDF_to_PNG.ipynb`.
-4. Click the play button.
+* cv2
+* PySimpleGUI
 
-![picture](https://user-images.githubusercontent.com/68419918/98466956-17de4680-2216-11eb-8b77-703e194b6f34.png)
+# Pythonライブラリのインストール方法
+
+1. ライブラリをpipを使ってダウンロードします。
+
+```bash
+pip install opencv-python
+```
+
+```bash
+pip install pysimplegui
+```
+
+# 使い方
+
+## 録画方法
+
+1. ターミナルから`main.py`を起動してください。
+2. 起動したら`録画ボタン`をクリック。
+3. 顔か動体を検出したら録画します。録画を停止するには`停止ボタン`をクリックしてください。
+
+## 録画したファイルの再生方法
+
+1. `開く`ボタンをクリックしてください。
+2. 保存先のディレクトリが開くので再生したいファイルを選択してください。
+
+# 顔認識用分類器について
+cv2モジュールから借用
